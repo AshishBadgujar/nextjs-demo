@@ -28,20 +28,20 @@ export default function Home({ todos }) {
   }
   return (
     <>
-      <div style={{ width: '100%', textAlign: 'center' }}>
+      <nav class="navbar">
+        <div class="nav-wrapper">
+          <h2>Todo</h2>
+        </div>
+      </nav>
+      <div class="main">
         <form action="" method="post" onSubmit={(e) => handleSubmit(e)}>
-          <div>
-            <input type="text" placeholder="type here..." value={text} onChange={(e) => setText(e.target.value)} />
-          </div>
+          <input type="text" placeholder="type here..." required value={text} onChange={(e) => setText(e.target.value)} />
           <button type="submit">submit</button>
         </form>
-
         {tasks.map(item => (
           <div key={item._id}>
-            <div>
-              {item.text}
-              <button type="button" onClick={() => handleDelete(item._id)}>Delete</button>
-            </div>
+            {item.text}
+            <button type="button" onClick={() => handleDelete(item._id)}>Delete</button>
           </div>
         ))}
       </div>
