@@ -28,12 +28,12 @@ export default function Home({ todos }) {
   }
   return (
     <>
-      <nav class="navbar">
-        <div class="nav-wrapper">
+      <nav className="navbar">
+        <div className="nav-wrapper">
           <h2>Todo</h2>
         </div>
       </nav>
-      <div class="main">
+      <div className="main">
         <form action="" method="post" onSubmit={(e) => handleSubmit(e)}>
           <input type="text" placeholder="type here..." required value={text} onChange={(e) => setText(e.target.value)} />
           <button type="submit">submit</button>
