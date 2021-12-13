@@ -9,7 +9,7 @@ function initDB() {
 
     // use when starting application as docker container
     let mongoUrlDocker = "mongodb://admin:password@mongodb";
-    mongoose.connect(mongoUrlLocal, {
+    mongoose.connect(mongoUrlDocker, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
